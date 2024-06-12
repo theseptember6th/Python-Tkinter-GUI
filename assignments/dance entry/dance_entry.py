@@ -26,7 +26,7 @@ username.grid()
 username_input=Entry(root,textvariable=username_var)
 username_input.grid(row=0,column=1)
 
-age_var=StringVar()
+age_var=IntVar()
 age=Label(root,text="Age:")
 age.grid(row=1)
 Age_input=Entry(root,textvariable=age_var)
