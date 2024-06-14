@@ -11,6 +11,10 @@ root = Tk()
 root.geometry("600x400")
 root.title("KRISTAL GUI")
 
+#for connecting verticalscrollbar to a widget
+#1 widget(yscrollcommand=scrollbar.set)
+#2 scrollbar.config(command=widget.yview)
+
 # Create a vertical scrollbar and pack it to the right side of the window
 scrollbar = Scrollbar(root)
 scrollbar.pack(fill=Y, side=RIGHT)
