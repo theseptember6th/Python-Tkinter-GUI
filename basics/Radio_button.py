@@ -21,13 +21,17 @@ selected_item = StringVar()
 selected_item.set("Momo")  # Set default value
 
 # Create and pack the label asking the user what they would like to have
-Label(root, text="What would you like to have sir?", font="lucida 19 bold", justify=LEFT, padx=14).pack()
+Label(root, text="What would you like to have, sir?", font="lucida 19 bold", justify=LEFT, padx=14).pack()
 
-# Create and pack the RadioButtons for each menu item
-Radiobutton(root, text="Momo", padx=14, variable=selected_item, value="Momo").pack(anchor="w")
-Radiobutton(root, text="Chowmein", padx=14, variable=selected_item, value="Chowmein").pack(anchor="w")
-Radiobutton(root, text="Pizza", padx=14, variable=selected_item, value="Pizza").pack(anchor="w")
-Radiobutton(root, text="Roast", padx=14, variable=selected_item, value="Roast").pack(anchor="w")
+# Create and pack the RadioButtons for each menu item with additional attributes
+Radiobutton(root, text="Momo", padx=14, variable=selected_item, value="Momo", 
+            anchor="w", justify="left", bg="lightblue", font=("Arial", 12)).pack(anchor="w")
+Radiobutton(root, text="Chowmein", padx=14, variable=selected_item, value="Chowmein", 
+            anchor="w", justify="left", bg="lightgreen", font=("Arial", 12)).pack(anchor="w")
+Radiobutton(root, text="Pizza", padx=14, variable=selected_item, value="Pizza", 
+            anchor="w", justify="left", bg="lightyellow", font=("Arial", 12)).pack(anchor="w")
+Radiobutton(root, text="Roast", padx=14, variable=selected_item, value="Roast", 
+            anchor="w", justify="left", bg="lightcoral", font=("Arial", 12)).pack(anchor="w")
 
 # Create and pack the order button
 Button(root, text="Order now", pady=10, command=place_order).pack()
